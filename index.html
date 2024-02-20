@@ -20,10 +20,565 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./script/tailwind.js"></script>
   </head>
-  <body>
+  <body class="font-text_raleway text-color_dark relative ">
+    <!-- confirm Modal  -->
+
+    <div
+      id="confirmModal"
+      class="bg-color_third/30 w-full top-0 left-0 fixed justify-center items-center min-h-screen font-textmedium hidden"
+    >
+      <div
+        class="bg-color_white rounded-xl shadow-xl py-10 sm:py-20 px-10 sm:px-20 flex flex-col items-center"
+      >
+        <img src="./images/success.png" alt="" />
+        <h2 class="pt-6 font-bold text-2xl text-green-300">SUCCESS</h2>
+        <p class="pt-3 text-xl font-semibold text-center">
+          Thank you for Booking Our Bus Seats.
+        </p>
+        <p class="text-xl font-semibold text-center">
+          We are working hard to find the best service and deals for you
+        </p>
+        <span class="pt-3 text-lg text-center"
+          >Shortly you will find a confirmation in your email.</span
+        >
+        <div class="text-center pt-5">
+          <a
+            href="./index.html"
+            class="py-3 px-10 rounded-xl bg-[green] text-color_white text-lg font-semibold inline-block"
+          >
+            Confirm
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- header part  -->
+    <header>
+      <!-- navbar section -->
+      <nav class="py-8">
+        <div class="container">
+          <div class="relative">
+            <ul
+              class="flex justify-between items-center flex-row-reverse md:flex-row"
+            >
+              <li class="text-lg sm:text-2xl lg:text-4xl font-bold">
+                P Ticket
+              </li>
+              
+              <li
+                class="text-lg md:text-xl lg:text-2xl font-semibold text-color_primary"
+              >
+                <a
+                  href="#paribahan"
+                  class="py-1 sm:py-2 px-3 sm:px-5 rounded-md bg-color_primary/10 border-2 border-color_primary/30 inline-block"
+                >
+                  Bus<img
+                    class="inline-block pl-1"
+                    src="./images/bus-icon.png"
+                    alt=""
+                  />
+                </a>
+              </li>
+              <li id="navHambarger" class="md:hidden text-3xl cursor-pointer">
+                <i class="fa-solid fa-burger"></i>
+              </li>
+              <li
+                id="navHambargerCross"
+                class="md:hidden text-3xl cursor-pointer hidden"
+              >
+                <i class="fa-solid fa-square-xmark"></i>
+              </li>
+            </ul>
+            <!-- clickable  menu button  -->
+            <div
+              id="hambargerMenu"
+              class="bg-color_white absolute top-0 left-0 w-full mt-[60px] rounded-b-lg py-3 opacity-0 ease-linear duration-150"
+            >
+             
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- banner section  -->
+      <section id="banner">
+        <div class="container">
+          <div
+            class="text-center bg-[url('./images/banner.png')] bg-no-repeat bg-cover rounded-3xl pb-5 bg-center"
+          >
+            <h1
+              class="text-3xl lg:text-7xl leading-10 lg:leading-[86px] font-extrabold leading max-w-[742px] mx-auto pt-20 text-color_white px-2"
+            >
+              End-to-End Travel with <span>PH Paribahan</span>
+            </h1>
+            <p
+              class="text-base md:text-lg pt-6 md:pt-10 max-w-[691px] mx-auto text-color_white px-2"
+            >
+              Yes, you can run unit tests and view the results directly within
+              the app. The integrated testing features allow for a streamlined .
+            </p>
+            <a
+              href="#paribahan"
+              class="font-bold text-xl bg-color_primary py-3 px-5 rounded-lg mt-10 mb-3 md:mb-8 border-none cursor-pointer inline-block"
+            >
+              Buy Tickets
+            </a>
+            <!-- banner bottom card  -->
+
+            <div
+              class="flex flex-wrap md:flex-nowrap gap-3 md:gap-10 px-[10%] md:translate-y-1/2"
+            >
+              <!-- card 1  -->
+              <div
+                class="w-full md:w-1/3 bg-color_white/80 md:bg-color_white flex items-center p-5 gap-4 justify-center rounded-xl font-text_inter border-b-2 md:border-b-4 border-color_primary"
+              >
+                <span>
+                  <img src="./images/people.png" alt="" />
+                </span>
+                <ul class="text-left">
+                  <li class="font-bold text-2xl md:text-4xl">500K+</li>
+                  <li class="text-color_dark60 text-lg">Registered users</li>
+                </ul>
+              </div>
+              <!-- card 2  -->
+              <div
+                class="w-full md:w-1/3 bg-color_white/80 md:bg-color_white flex items-center p-5 gap-4 justify-center rounded-xl font-text_inter border-b-2 md:border-b-4 border-color_primary"
+              >
+                <span>
+                  <img src="./images/ticket-cupon.png" alt="" />
+                </span>
+                <ul class="text-left">
+                  <li class="font-bold text-2xl md:text-4xl">1.7 lacks+</li>
+                  <li class="text-color_dark60 text-lg">Tickets sold</li>
+                </ul>
+              </div>
+              <!-- card 3  -->
+              <div
+                class="w-full md:w-1/3 bg-color_white/80 md:bg-color_white flex items-center p-5 gap-4 justify-center rounded-xl font-text_inter border-b-2 md:border-b-4 border-color_primary"
+              >
+                <span>
+                  <img src="./images/stoppage.png" alt="" />
+                </span>
+                <ul class="text-left">
+                  <li class="font-bold text-2xl md:text-4xl">80K++</li>
+                  <li class="text-color_dark60 text-lg">Rental partners</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <!-- main part  -->
+    <main>
+      <section id="coupon" class="pt-40">
+        <div class="container">
+          <div>
+            <h3 class="font-bold text-4xl text-center">Best offers for you</h3>
+            <!-- coupon card begin  -->
+            <div class="pt-10 grid gap-5 grid-cols-1 md:grid-cols-2">
+              <!-- card 1  -->
+              <div class="flex bg-color_rare rounded-3xl font-text_inter">
+                <div class="flex-1 py-6 px-4 flex justify-center">
+                  <div class="text-left">
+                    <h4 class="font-bold text-3xl md:text-[40px]">15% OFF</h4>
+                    <h5
+                      class="text-lg md:text-xl font-semibold text-color_dark80"
+                    >
+                      on your next purchase
+                    </h5>
+                    <p class="text-base md:text-lg text-color_dark50">
+                      use by January 2024
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="w-[37%] md:w-1/3 border-l-[3px] border-color_white border-dashed flex flex-col items-center justify-center relative"
+                >
+                  <h4 class="font-bold text-3xl md:text-[40px]">NEW15</h4>
+                  <p class="text-base md:text-lg text-color_dark50 pt-2">
+                    Coupon Code
+                  </p>
+                  <div
+                    class="w-8 h-8 bg-color_white rounded-full absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2"
+                  ></div>
+                  <div
+                    class="w-8 h-8 bg-color_white rounded-full absolute bottom-0 left-0 -translate-x-1/2 translate-y-1/2"
+                  ></div>
+                </div>
+              </div>
+              <!-- card 2  -->
+              <div class="flex bg-color_secondary rounded-3xl font-text_inter">
+                <div class="flex-1 py-6 px-4 flex justify-center">
+                  <div class="text-left">
+                    <h4 class="font-bold text-3xl md:text-[40px]">20% OFF</h4>
+                    <h5
+                      class="text-lg md:text-xl font-semibold text-color_dark80"
+                    >
+                      on your next purchase
+                    </h5>
+                    <p class="text-base md:text-lg text-color_dark50">
+                      use by January 2024
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="w-[45%] border-l-[3px] border-color_white border-dashed flex flex-col items-center justify-center relative"
+                >
+                  <h4 class="font-bold text-3xl md:text-[40px]">Couple 20</h4>
+                  <p class="text-base md:text-lg text-color_dark50 pt-2">
+                    Coupon Code
+                  </p>
+                  <div
+                    class="w-8 h-8 bg-color_white rounded-full absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2"
+                  ></div>
+                  <div
+                    class="w-8 h-8 bg-color_white rounded-full absolute bottom-0 left-0 -translate-x-1/2 translate-y-1/2"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-center pt-4 md:pt-8">
+              <button
+                class="font-bold text-xl text-color_primary py-3 px-5 rounded-lg mt-10 mb-3 md:mb-8 border-2 border-color_primary"
+              >
+                See All Offers
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- paribahan section  -->
+      <section
+        id="paribahan"
+        class="border-t-4 border-color_primary mt-10 pb-20 rounded-t-[60px] bg-color_third"
+      >
+        <div class="container">
+          <div>
+            <h3 class="font-bold text-4xl pt-16 text-center">PH Paribahan</h3>
+            <p
+              class="text-lg font-text_inter text-color_dark60 max-w-[736px] mx-auto text-center pt-6 pb-8"
+            >
+              Yes, you can run unit tests and view the results directly within
+              the app. The integrated testing features allow for a streamlined .
+            </p>
+            <!-- paribahan main part  -->
+            <div>
+              <!-- main  first  -->
+              <div
+                class="flex flex-col md:flex-row bg-color_white py-7 rounded-xl"
+              >
+                <div class="flex-1">
+                  <!-- first part  -->
+                  <div class="flex justify-between px-6 pb-7 items-center">
+                    <div class="flex gap-4 items-center">
+                      <span><img src="./images/bus-logo.png" alt="" /></span>
+                      <ul>
+                        <li class="font-bold text-[25px] md:text-[32px]">
+                          Greenline Paribahan
+                        </li>
+                        <li class="text-lg font-text_inter text-color_dark60">
+                          Coach-009-WEB ! AC_Business
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <p
+                        class="text-lg text-color_primary bg-color_primary/15 py-2 px-4 rounded-lg"
+                      >
+                        <img
+                          class="inline-block pr-2"
+                          src="./images/seat-green.png"
+                          alt=""
+                        /><span id="availableSeatCount" class="pr-2">10</span
+                        >Seats left
+                      </p>
+                    </div>
+                  </div>
+                  <!-- second part  -->
+                  <div class="bg-color_third mx-5 px-2 rounded-xl">
+                    <ul
+                      class="flex justify-between py-3 px-3 border-b-2 border-color_dark/20 border-dashed"
+                    >
+                      <li>Route</li>
+                      <li>Dhaka - Sylhet</li>
+                    </ul>
+                    <ul
+                      class="flex justify-between py-3 px-3 border-b-2 border-color_dark/20 border-dashed"
+                    >
+                      <li>Departure Time</li>
+                      <li>9:00 PM</li>
+                    </ul>
+                    <ul class="flex justify-around py-5 px-3">
+                      <li
+                        class="bg-color_dark/5 py-2 px-5 rounded-lg font-medium"
+                      >
+                        Boarding Point - Laxmipur
+                      </li>
+                      <li
+                        class="bg-color_dark/5 py-2 px-5 rounded-lg font-medium"
+                      >
+                        Dropping Point - Bogura
+                      </li>
+                      <li
+                        class="bg-color_dark/5 py-2 px-5 rounded-lg font-medium"
+                      >
+                        Est. Time - 11 Hour
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="w-full md:w-1/4 border-l-2 border-color_primary border-dashed flex justify-center items-center flex-col relative"
+                >
+                  <img src="./images/fare.png" alt="" />
+                  <h5 class="font-bold text-3xl pt-3">550 Taka</h5>
+                  <span class="font-semibold text-2xl text-color_dark60"
+                    >Per Seat</span
+                  >
+                  <div
+                    class="w-[50px] h-[50px] bg-color_third rounded-full absolute top-0 left-0 -translate-x-1/2 -translate-y-full hidden md:block"
+                  ></div>
+                  <div
+                    class="w-[50px] h-[50px] bg-color_third rounded-full absolute bottom-0 left-0 -translate-x-1/2 translate-y-full hidden md:block"
+                  ></div>
+                </div>
+              </div>
+              <!-- paribahan form   -->
+              <div class="bg-color_white mt-5 rounded-xl">
+                <div class="flex flex-col md:flex-row">
+                  <div class="flex-1 p-5">
+                    <div class="pl-4">
+                      <h4
+                        class="font-semibold text-2xl border-b-2 border-color_primary border-dashed pb-3"
+                      >
+                        Select Your Seat
+                      </h4>
+                      <ul
+                        class="flex justify-between items-center border-b-2 border-color_primary border-dashed"
+                      >
+                        <li
+                          class="font-medium text-lg pb-3 pt-4 text-color_dark50"
+                        >
+                          <img
+                            class="inline-block pr-1"
+                            src="./images/seat-gray.png"
+                            alt=""
+                          />
+                          Available
+                        </li>
+                        <li
+                          class="font-medium text-lg pb-3 pt-4 text-color_dark50"
+                        >
+                          <img
+                            class="inline-block pr-1"
+                            src="./images/seat-green-filled.png"
+                            alt=""
+                          />
+                          Selected
+                        </li>
+                      </ul>
+                      <ul class="flex justify-end py-5">
+                        <li class="py-3 px-10 bg-color_dark/10 rounded-lg">
+                          <img src="./images/wheel.png" alt="" />
+                        </li>
+                      </ul>
+                      <div>
+                        <!-- part A  -->
+                        <ul class="flex justify-around py-4 gap-2">
+                          <li
+                            class="bus_seat py-2 md:py-3 px-5 md:px-7 lg:px-10 bg-color_third rounded-lg cursor-pointer"
+                            id="A1"
+                          >
+                            A1
+                          </li>
+                          <li
+                            class="bus_seat py-2 md:py-3 px-5 md:px-7 lg:px-10 bg-color_third rounded-lg cursor-pointer"
+                            id="A2"
+                          >
+                            A2
+                          </li>
+                          <li
+                            class="bus_seat py-2 md:py-3 px-5 md:px-7 lg:px-10 bg-color_third rounded-lg cursor-pointer"
+                            id="A3"
+                          >
+                            A3
+                          </li>
+                          <li
+                            class="bus_seat py-2 md:py-3 px-5 md:px-7 lg:px-10 bg-color_third rounded-lg cursor-pointer"
+                            id="A4"
+                          >
+                            A4
+                          </li>
+                        </ul>
+                        <!-- part B  -->
+                        <ul class="flex justify-around py-4 gap-2">
+                          <li
+                            class="bus_seat py-2 md:py-3 px-5 md:px-7 lg:px-10 bg-color_third rounded-lg cursor-pointer"
+                            id="B1"
+                          >
+                            B1
+                          </li>
+                          <li
+                            class="bus_seat py-2 md:py-3 px-5 md:px-7 lg:px-10 bg-color_third rounded-lg cursor-pointer"
+                            id="B2"
+                          >
+                            B2
+                          </li>
+                          <li
+                            class="bus_seat py-2 md:py-3 px-5 md:px-7 lg:px-10 bg-color_third rounded-lg cursor-pointer"
+                            id="B3"
+                          >
+                            B3
+                          </li>
+                          <li
+                            class="bus_seat py-2 md:py-3 px-5 md:px-7 lg:px-10 bg-color_third rounded-lg cursor-pointer"
+                            id="B4"
+                          >
+                            B4
+                          </li>
+                        </ul>
+                     
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="w-full md:w-2/5 border-l-2 border-color_primary border-dashed px-3 my-5"
+                  >
+                    <h4
+                      class="font-semibold text-2xl border-b-2 border-color_primary border-dashed pb-3 px-2"
+                    >
+                      Give Information Here
+                    </h4>
+                    <div class="bg-color_third py-4 mt-6 px-10 rounded-xl">
+                      <ul
+                        class="flex justify-between border-b-2 border-color_primary/70 border-dashed pb-4 mb-3"
+                      >
+                        <li class="font-semibold text-lg font-text_inter">
+                          Seat<span
+                            id="selectSeatCount"
+                            class="bg-color_primary text-color_white ml-1 py-1 px-2 rounded-full text-sm font-medium"
+                            >0</span
+                          >
+                        </li>
+                        <li class="font-semibold text-lg font-text_inter">
+                          Class
+                        </li>
+                        <li class="font-semibold text-lg font-text_inter">
+                          Price
+                        </li>
+                      </ul>
+
+                      <!-- dynamic ticket info  -->
+                      <div id="clickedSeatDetails"></div>
+
+                      <ul
+                        class="flex justify-between border-t-2 border-color_primary border-dashed mt-3 pt-2"
+                      >
+                        <li class="font-semibold">Total Price</li>
+                        <li class="font-semibold">
+                          BDT <span id="totalPrice">0</span>
+                        </li>
+                      </ul>
+
+                      <ul
+                        id="discountBox"
+                        class="justify-between mt-3 pt-2 hidden"
+                      >
+                        <li class="font-semibold text-color_dark/60">
+                          Discount
+                        </li>
+                        <li class="font-semibold text-color_dark/60">
+                          BDT <span id="discountValue">0</span>
+                        </li>
+                      </ul>
+                      <div id="couponInputBox" class="py-5 relative">
+                        <input
+                          id="couponInput"
+                          class="w-full py-3 pl-4 text-lg outline-none rounded-lg border-2 border-color_primary/40"
+                          type="text"
+                          placeholder="coupon"
+                        />
+                        <button
+                          id="couponBtn"
+                          class="bg-color_primary text-lg font-semibold py-3 px-6 rounded-lg text-color_white absolute right-0 disabled:opacity-10"
+                        >
+                          Apply
+                        </button>
+                      </div>
+
+                      <ul class="flex justify-between mt-2 pt-2">
+                        <li class="font-semibold">Grand Total</li>
+                        <li class="font-semibold">
+                          BDT <span id="grandTotal">0</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <form action="" class="flex flex-col pt-5 px-4">
+                        <label class="font-semibold text-lg" for="passenger"
+                          >Passenger Name</label
+                        >
+                        <input
+                          id="fullName"
+                          class="mt-2 py-3 pl-4 text-lg outline-none border border-color_dark/40 rounded-lg"
+                          name="passenger"
+                          type="text"
+                          placeholder="Enter your name"
+                        />
+                        <label
+                          class="font-semibold text-lg inline-block pt-5"
+                          for="number"
+                          >Phone</label
+                        >
+                        <input
+                          id="phoneNumber"
+                          class="mt-2 py-3 pl-4 text-lg outline-none border border-color_dark/40 rounded-lg"
+                          name="number"
+                          type="number"
+                          placeholder="Enter your number"
+                        />
+                        <label
+                          class="font-semibold text-lg inline-block pt-5"
+                          for="email"
+                          >Email</label
+                        >
+                        <input
+                          id="emailId"
+                          class="mt-2 py-3 pl-4 text-lg outline-none border border-color_dark/40 rounded-lg"
+                          name="email"
+                          type="email"
+                          placeholder="Enter your email"
+                        />
+                        <button
+                          id="buyBtn"
+                          class="py-4 text-xl font-bold bg-color_primary rounded-lg w-full mt-5 text-color_white"
+                        >
+                          Next
+                        </button>
+                      </form>
+                    </div>
+
+                    <ul class="flex justify-around pt-5">
+                      <li class="text-color_dark/60 font-text_inter underline">
+                        Terms and Conditions
+                      </li>
+                      <li class="text-color_dark/60 font-text_inter underline">
+                        Cancellation Policy
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
     <!-- javascrpit -->
     <script src="scrpit/tailwind.js"></script>
-    <script src="scrpit/reuseable.js"></script>
-    <script src="scrpit/ticket.js"></script>
+    <!-- <script src="scrpit/reuseable.js"></script>
+    <script src="scrpit/ticket.js"></script> -->
   </body>
   </html>
