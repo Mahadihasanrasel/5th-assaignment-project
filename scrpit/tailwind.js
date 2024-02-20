@@ -1,9 +1,14 @@
-tailwind.config = {
+//  custom styles with js 
+
+
+
+ tailwind.config = {
     theme: {
       fontFamily: {
         text_inter: ["Inter", " sans - serif"],
         text_raleway: ["Raleway", "sans - serif"],
       },
+
       colors: {
         color_primary: "#1DD100",
         color_rare: "#FFBF0F",
@@ -16,13 +21,14 @@ tailwind.config = {
         color_dark50: "#03071280",
         color_white: "#ffffff",
       },
+
       container: {
         center: true,
         padding: {
-          DEFAULT: "10px",
-          sm: "12px",
+          DEFAULT: "8px",
+          sm: "10px",
           lg: "16px",
-          xl: "20px",
+          xl: "22px",
         },
       },
     },
